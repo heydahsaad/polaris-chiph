@@ -51,13 +51,12 @@ export class PolarisChip extends LitElement {
       }
 
       a {
-        background-color: orange;
+        background-color: azure;
         color: black;
         font-size: 24px;
         padding: 16px;
         margin: 8px;
       }
-
       a:focus
       a:active
       a:hover {

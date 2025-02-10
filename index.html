@@ -19,49 +19,6 @@
     polaris-chip {
       margin: 16px;
     }
-
-    style{
-
-    }
-    .bor {
-      padding: 8px;
-      background: #fff8e7;
-      width:300px;
-      transition:0.3s;
-      display:block;
-      box-shadow: 0 5px 15px 0 rgba(0,0,0,0.5);
-      border-radius:25px;
-      border: 10px solid rgb(81,155,204);
-    }
-
-    .main_img{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-    }
-
-    .btn{
-    padding:10px 20px;
-    display: flex;
-    background-color:#0492c2;
-    border: 2px solid #1f456e;
-    border-radius: 25px;
-    font-family: "Bebas Neue", cursive;
-    font-size: 17px;
-    font-weight: bold; 
-    color: white;
-    }
-
-    .card_stat{
-      margin: 1em 0;
-    }
-
-    p{
-      text-align: center;
-      font-size: 16px;
-    }
-
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -73,42 +30,27 @@
   <polaris-chip title="Faculty and Staff"></polaris-chip>
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
+  <polaris-chip title="PSU"></polaris-chip>
 
   <h1>my-card</h1>
-  <!--
-  <div class="bor">
-    <my-card title="Bingo"></my-card>
-    <img class="main_img" src="https://vignette.wikia.nocookie.net/blueypedia/images/0/03/Clipart.png/revision/latest?cb=20190120182017">
-    <p>Bluey is an Australian animated preschool television series which premiered on ABC Kids on 1 October 2018</p>
-    <table class="card_stat">
-      <tbody>
-        <tr><th>Full Name</th><td>Bluey Heeler</td></tr>
-        <tr><th>Age</th><td>7</td></tr>
-        <tr><th>Breed</th><td>Blue Heeler</td></tr>
-        <tr><th>Also known as</th><td> Barnicus</td></tr>
-      </tbody>
-    </table>
-    <a class="btn" href="https://haxtheweb.org/" target="_blank">Learn more</a>
-  </div>
--->
-  <my-card title="Winton" image="https://www.bluey.tv/wp-content/uploads/2023/07/Winton.png"
-   link="https://www.bluey.tv/watch/"></my-card>
+
+  <div style="display: flex; justify-content: center; align-items: end;"><my-card title="Winton" image="https://www.bluey.tv/wp-content/uploads/2023/07/Winton.png"
+   link="https://www.bluey.tv/watch/" color="green"></my-card>
 
   <my-card title="Chilli" image="https://www.cartonionline.com/wordpress/wp-content/uploads/2023/02/chilli.png"
-   link="https://www.bluey.tv/watch/"></my-card>
+   link="https://www.bluey.tv/watch/" color="red"></my-card>
 
    <my-card title="Muffin" image="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/3cbcc-muffin-bluey-png.png?resize=700%2C700&ssl=1&is-pending-load=1"
-   link="https://www.bluey.tv/watch/"></my-card>
+   link="https://www.bluey.tv/watch/" color="orange"></my-card>
 
    <my-card title="Jean Luc" image="https://eltallerdehector.com/wp-content/uploads/2022/06/da429-jean-luc-bluey-png.png"
-   link="https://www.bluey.tv/watch/"></my-card>
+   link="https://www.bluey.tv/watch/" color="purple"></my-card>
 
    <my-card title="Mackenzie" image="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/fe4e1-mackenzie-bluey-png.png?fit=700%2C700&ssl=1"
-   link="https://www.bluey.tv/watch/"></my-card>
+   link="https://www.bluey.tv/watch/" color="brown"></my-card></div>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
 </body>
-
 </html>

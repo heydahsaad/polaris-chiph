@@ -17,12 +17,7 @@ export class MyCard extends LitElement {
     this.title = "Bluey";
     this.link = "https://haxtheweb.com";
     this.image = "https://www.disneyclips.com/images3/images/bluey-birds.png";
-    this.style = "black";
-
-    
-    var sheet = document.createElement("style")
-      sheet.innerHTML = "div {border: 2px solid black;}";
-      document.body.appendChild(sheet)
+    this.color = "black";
   }
 
   static get styles() {
@@ -40,6 +35,7 @@ export class MyCard extends LitElement {
         box-shadow: 0 5px 15px 0 rgba(0,0,0,0.5);
         border-radius:25px;
         border: 10px solid rgb(81,155,204);
+        min-height:45em;
       }
 
       img{
@@ -69,19 +65,43 @@ export class MyCard extends LitElement {
         font-size: 17px;
         font-weight: bold; 
         color: white;
+        margin-top: auto;
       }
+
+      a:hover{
+        padding:10px 20px;
+        display: flex;
+        background-color:#173d4a;
+        border: 2px solid #1f456e;
+        border-radius: 25px;
+        font-family: "Bebas Neue", cursive;
+        font-size: 17px;
+        font-weight: bold; 
+        color: white;
+        margin-top: auto;
+
+      }
+
+    p{
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .card_stat{
+      margin: 1em 0;
+    }
     `;
   }
 
   render() {
     return html`
-    <div class="boxcolor">
+    <div class="boxcolor" style="border: 10px solid ${this.color};">
     <h1>${this.title}</h1>
     <img src=${this.image}>
     <p>Bluey is an Australian animated preschool television series which premiered on ABC Kids on 1 October 2018</p>
     <table class="card_stat">
       <tbody>
-        <tr><th>Full Name</th><td>Bluey Heeler</td></tr>
+        <tr><th>Full Name</th><td>${this.title}</td></tr>
         <tr><th>Age</th><td>7</td></tr>
         <tr><th>Breed</th><td>Blue Heeler</td></tr>
         <tr><th>Also known as</th><td> Barnicus</td></tr>
@@ -94,10 +114,10 @@ export class MyCard extends LitElement {
 
   static get properties() {
     return {
-      title: { type: String },
+      title: {type: String },
       link: {type: String},
       image: {type: String},
-      style: {type: String},
+      color: {type: String},
     };
   }
 }
