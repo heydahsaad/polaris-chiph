@@ -57,7 +57,7 @@ export class MyCard extends LitElement {
 
       a {
         padding:10px 20px;
-        display: flex;
+        display: block;
         background-color:#0492c2;
         border: 2px solid #1f456e;
         border-radius: 25px;
@@ -65,12 +65,12 @@ export class MyCard extends LitElement {
         font-size: 17px;
         font-weight: bold; 
         color: white;
-        margin-top: auto;
+        margin: 20px;
       }
 
       a:hover{
         padding:10px 20px;
-        display: flex;
+        display: block;
         background-color:#173d4a;
         border: 2px solid #1f456e;
         border-radius: 25px;
@@ -78,7 +78,7 @@ export class MyCard extends LitElement {
         font-size: 17px;
         font-weight: bold; 
         color: white;
-        margin-top: auto;
+        margin: 20px;
 
       }
 
@@ -107,7 +107,7 @@ export class MyCard extends LitElement {
         <tr><th>Also known as</th><td> Barnicus</td></tr>
       </tbody>
     </table>
-    <a class="btn" href=${this.link} target="_blank">Learn more</a>
+    <a class="btn" href=${this.link} target="_blank" style="background-color:${this.color}">Learn more</a>
     </div>
     `;
   }
