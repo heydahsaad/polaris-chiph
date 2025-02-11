@@ -19,6 +19,15 @@ export class MyCard extends LitElement {
     this.image = "https://www.disneyclips.com/images3/images/bluey-birds.png";
     this.color = "black";
   }
+  
+  handleClick() {
+    //const popupUrl = `https://www.bluey.tv/watch/`;
+    //const popupTitle = `${this.title} Info`;
+    //const popupOptions = "width=600,height=400,left=200,top=200,resizable=yes";
+
+    //window.open(popupUrl, popupTitle, popupOptions);
+    alert("Hello! This is my attempt to use the button")
+}
 
   static get styles() {
     return css`
@@ -82,6 +91,34 @@ export class MyCard extends LitElement {
 
       }
 
+      .btnchange{
+        padding: 10px 8px;
+        display: flex;
+        background-color:gray;
+        border: 2px solid #1f456e;
+        border-radius: 25px;
+        font-family: "Bebas Neue", cursive;
+        font-size: 17px;
+        font-weight: bold; 
+        color: white;
+        margin: 0 auto 0 auto;
+      }
+
+      .btnchange:hover{
+        padding: 10px 8px;
+        display: flex;
+        cursor:pointer;
+        background-color:blue;
+        border: 2px solid #1f456e;
+        border-radius: 25px;
+        font-family: "Bebas Neue", cursive;
+        font-size: 17px;
+        font-weight: bold; 
+        color: white;
+        margin:0 auto 0 auto;
+      }
+
+
     p{
       text-align: center;
       font-size: 16px;
@@ -108,6 +145,7 @@ export class MyCard extends LitElement {
       </tbody>
     </table>
     <a class="btn" href=${this.link} target="_blank" style="background-color:${this.color}">Learn more</a>
+    <button class="btnchange" href=${this.link} @click=${this.handleClick}>Try</button>
     </div>
     `;
   }
