@@ -19,6 +19,19 @@
     polaris-chip {
       margin: 16px;
     }
+    button {
+      padding:10px 20px;
+      display: block;
+      background-color:#0492c2;
+      border: 2px solid #1f456e;
+      border-radius: 25px;
+      font-family: "Bebas Neue", cursive;
+      font-size: 17px;
+      font-weight: bold; 
+      color: white;
+      margin: 20px;
+      cursor: pointer;
+    }
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -33,26 +46,45 @@
   <polaris-chip title="PSU"></polaris-chip>
 
   <h1>my-card</h1>
-
-  <div style="display: flex; justify-content: center; align-items: end;">
+  <button>Toggle</button>
+  <div style="display: flex; justify-content: center; align-items: end;" >
     <my-card title="Winton" image="https://www.bluey.tv/wp-content/uploads/2023/07/Winton.png"
-    link="https://www.bluey.tv/watch/" color="green"></my-card>
+    link="https://www.bluey.tv/watch/" color="green" fancy>
+      <p slot="character">Short and a funny dog</p>
+    </my-card>
 
-    <my-card title="Chilli" image="https://www.cartonionline.com/wordpress/wp-content/uploads/2023/02/chilli.png"
-    link="https://www.bluey.tv/watch/" color="red"></my-card>
+    <my-card title="This is Bluey's mom, Chilli Heeler. Her breed is orange heeler" image="https://www.pngmart.com/files/16/Cartoon-Bluey-PNG-Photos.png"
+    link="https://www.bluey.tv/watch/" color="red">
+    </my-card>
 
     <my-card title="Muffin" image="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/3cbcc-muffin-bluey-png.png?resize=700%2C700&ssl=1&is-pending-load=1"
-    link="https://www.bluey.tv/watch/" color="orange"></my-card>
+    link="https://www.bluey.tv/watch/" color="orange">
+      <p slot="character">Annoying but cute cousin of Bluey</p>
+    </my-card>
 
     <my-card title="Jean Luc" image="https://eltallerdehector.com/wp-content/uploads/2022/06/da429-jean-luc-bluey-png.png"
-    link="https://www.bluey.tv/watch/" color="purple"></my-card>
+    link="https://www.bluey.tv/watch/" color="purple" fancy>
+    </my-card>
 
     <my-card title="Mackenzie" image="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/fe4e1-mackenzie-bluey-png.png?fit=700%2C700&ssl=1"
-    link="https://www.bluey.tv/watch/" color="brown"></my-card>
+    link="https://www.bluey.tv/watch/" color="brown">
+      <p slot="character">A good friend to Bluey</p>
+    </my-card>
   </div>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
-  <script type="module" src="./src/my-card.js"></script>
+  <script type="module" src="./src/my-card.js"></script> 
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      const cards = document.querySelectorAll('my-card');
+
+      // Toggle the 'fancy' class on all my-card elements
+      cards.forEach(card => {
+        card.fancy = !card.fancy;
+      });
+    });
+  </script>
 </body>
 </html>
