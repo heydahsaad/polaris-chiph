@@ -84,6 +84,7 @@ export class MyCard extends LitElement {
         color: rgb(81,155,204);
         text-align: center;
         font-family: "Bebas Neue", cursive;
+        overflow: auto;
       }
 
       a {
@@ -150,13 +151,13 @@ export class MyCard extends LitElement {
       }
 
       details summary {
-      text-align: center;
-      font-size: 20px;
-      padding: 5px;
-      cursor: pointer;
-      box-shadow: 3px 3px 15px black;
-      border-radius: 25px;
-      margin: 15px;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+        box-shadow: 3px 3px 15px black;
+        border-radius: 25px;
+        margin: 15px;
       } 
 
       details[open] summary {
