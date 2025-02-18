@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@haxtheweb/meme-maker/meme-maker.js";
 
 /**
  * Now it's your turn. Here's what we need to try and do:
@@ -33,7 +34,7 @@ export class MyCard extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
       }
 
       :host([fancy]) .boxcolor{
@@ -194,6 +195,7 @@ export class MyCard extends LitElement {
   render() {
     return html`
     <div class="boxcolor" style="border: 10px solid ${this.color};">
+      <!-- ${this.title.length > 20 ? this.title.substring(0,10) + "..." : this.title} -->
       <h1 style="color: ${this.color}">${this.title}</h1>
       <!-- Place to put the slot -->
       <slot name="character">Default characteristic: Like a dog</slot>
